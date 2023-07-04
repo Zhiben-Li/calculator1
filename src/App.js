@@ -168,6 +168,9 @@ function App() {
   };
 
   const memoryRecall = () => {
+    if (memory === "") {
+      return;
+    }
     handleClick("MR");
     setCalc(memory.toString());
   };
