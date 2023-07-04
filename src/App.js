@@ -139,6 +139,15 @@ function App() {
 
   const equal = () => {
     handleClick("=");
+    if (calc === "") {
+      return;
+    }
+    if (!start) {
+      return;
+    }
+    if (opr === "=") {
+      return;
+    }
     setCalc(eval(result + opr + calc).toString());
     setStart(false);
     setOpr("=");
